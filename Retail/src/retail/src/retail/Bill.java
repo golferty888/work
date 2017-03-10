@@ -1,14 +1,49 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package retail;
 
-/**
- *
- * @author INT105
- */
-public class Bill {
+public abstract class Bill {
+   protected long billId;
+   private Customer cust;
+   private double totalPrice;
+   private double promoPrice;
+
+    public Bill(Customer cust, double totalPrice) {
+        this.cust = cust;
+        this.totalPrice = totalPrice;
+    }
+
+    public Customer getCust() {
+        return cust;
+    }
+
+    public void setCust(Customer cust) {
+        this.cust = cust;
+    }
+   
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double price) {
+        this.totalPrice = totalPrice;
+    }
+
+    public void setPromoPrice(Bill bill, double minPrice,
+            double percentPro, double maxPro) {
+      /*  if(){
+        
+        }*/
+        
+        
+    }
+
+    @Override
+    public String toString() {
+        return "Bill id: " + billId + " " + cust + "\nTotal Price = " + totalPrice + ", Promotion Price=" + promoPrice + "\nNet = " + (totalPrice - promoPrice)+"\n------------------------------------";
+    }
     
+    
+    
+    
+    
+            
 }
