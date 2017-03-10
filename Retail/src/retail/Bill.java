@@ -6,9 +6,13 @@ public class Bill {
     private  Customer cust;
     private double totalPrice,promoPrice;
 
-    public Bill( Customer cust, double totalPrice, double promoPrice) {
+    public Bill() {
+    }
+    
+   
+    public Bill( Customer cust, double Price) {
        
-        this.Cust = Cust;
+        this.cust = cust;
         this.totalPrice = totalPrice;
         this.promoPrice = promoPrice;
     }
